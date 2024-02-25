@@ -1,0 +1,21 @@
+version: '3.8'
+
+services:
+  frontend:
+    image: snamawale/frontend:v3
+    container_name: frontend
+    ports:
+    - 80:80
+    stdin_open: true
+    tty: true
+
+  order:
+    image: ranjita07/orderapp1:finalv5
+    container_name: order
+    ports:
+      - 8080:8080
+  items:
+    image: nepalimohan/stockitem:v9
+    container_name: items
+    ports:
+      - 8000:8080
